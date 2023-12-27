@@ -21,7 +21,7 @@ class Quiz:
         else:
             print(f"Wrong! The correct answer is: {correct_answer}")
     
-    def conduct_quiz(self):
+    def quiz_conduct(self):
         num_questions = len(self.questions)
         for i in range(num_questions):
             num_options = self.display_question(i)
@@ -32,7 +32,7 @@ class Quiz:
             self.check_answer(i, self.questions[i]['options'][int(user_input) - 1])
 
     # Display the final score
-    def show_result(self):
+    def result(self):
         print(f"\nQuiz completed!")
         print(f"Your final score is: {self.score}/{len(self.questions)}")
 
@@ -40,33 +40,32 @@ class Quiz:
 # Giving input data of questions,options and answers
 quiz_data = [
     {
-    "question":"What is capital of India?",
-    "options":["Mumbai","Delhi","Chennai","Gujarat"],
-    "answer":"Delhi"},
+    "question":"who is the first prime minister of india ?",
+    "options":["Gandhi","Nehru","Bhagath singh","Pranab Mukharji"],
+    "answer":"Nehru"},
     
-    {"question":"What is 10+8?",
-    "options":["20","24","18","16"],
-    "answer":"18"},
+    {"question":"What is 10-8?",
+    "options":["2","24","18","16"],
+    "answer":"2"},
     
-    {"question":"How many primes are there between 1 and 10?",
+    {"question":"How many composite are there between 1 and 10?",
     "options":["2","3","4","1"],
     "answer":"4"}
 ]
 
 # Creating a object named as Quiz with the above data provided
-my_quiz = Quiz(quiz_data)
+quiz = Quiz(quiz_data)
 
 # Conducting the quiz
-my_quiz.conduct_quiz()
+quiz.quiz_conduct()
 
 # Displaying the result
-my_quiz.show_result()
+quiz.result()
 '''
-This code consists of functions,classes.
-At first to design this I don’t know about classes in python. Later I learnt them from W3 schools and chatgpt.
-With the help of W3 schools and chatgpt I can complete the code.
-This code displays the question and options.
-Next, we have choose one number from the numbering given to the options.
-Then the input is validated. After the completion of all questions.
+At First i didnt have minimum knowledge abouut python but after learning from the w3 schools 
+I have learnt how to answer any question in python language
+The code will display the questions and options 
+choose one option from the given nuumbering given to the options.
 The final score is displayed.
+
 '''
